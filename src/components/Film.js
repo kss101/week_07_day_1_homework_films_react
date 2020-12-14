@@ -1,7 +1,7 @@
 const Film = ({name, url}) => {
     return(
         <>
-            <li>{name}</li>
+            <li><a href={url} rel="external" target="_blank">{name}</a></li>
         </>
     )
 }

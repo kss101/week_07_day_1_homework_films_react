@@ -4,7 +4,7 @@ import FilmList from "../components/FilmList";
 import ViewMoreFilms from "../components/ViewMoreFilms";
 
 const FilmBox = () => {
-    const initialState = [
+    const initialStateFilms = [
         {
           id: 1,
           name: "Spider-Man: Into the Spider-Verse",
@@ -29,9 +29,18 @@ const FilmBox = () => {
           name: "Captain Marvel",
           url: "https://www.imdb.com/title/tt4154664/?ref_=rlm"
         }
-      ]
+    ]
 
-      const [films, setFilms] = useState(initialState);
+    const initialStateUpComing = [
+        {
+            id: 1,
+            url: "https://www.imdb.com/calendar/?region=gb",
+        }
+    ]
+
+      const [films, setFilms] = useState(initialStateFilms);
+
+      const [upComingFilms, setUpComingFilms] = useState(initialStateUpComing);
 
     return (
         <>
@@ -39,7 +48,7 @@ const FilmBox = () => {
             <hr />
             <FilmList films={films}/>
             <hr />
-            <ViewMoreFilms />
+            <ViewMoreFilms upComingFilms={upComingFilms} />
         </>
     );
 }

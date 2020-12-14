@@ -1,7 +1,10 @@
-const ViewMoreFilms = () => {
+const ViewMoreFilms = ({upComingFilms}) => {
+    
+    const url = upComingFilms[0].url + upComingFilms[0].region;
+
     return(
         <>
-            <p>View More Films...</p>        
+            <a href={url} rel="external" target="_blank" rel="noreferrer">View more upcoming releases</a>       
         </>
     )
 }

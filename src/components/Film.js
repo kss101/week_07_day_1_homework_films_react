@@ -1,7 +1,7 @@
-const Film = () => {
+const Film = ({name, url}) => {
     return(
         <>
-            <p>Film Title...</p>
+            <li>{name}</li>
         </>
     )
 }
